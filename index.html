@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Gallery</title>
+  <link rel="stylesheet" href="style.css">
+    <!-- fontawesome kit -->
+  <script src="https://kit.fontawesome.com/eaf6e2a015.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Video GAllery</h1>
+    <div class="row">
+      <div class="col">
+        <div class="feature-img">
+          <img src="img/FB_IMG_1637591291309.jpg" width="100%">
+          <i class="fa-solid fa-circle-play play-btn"></i>
+        </div>
+      </div>
+      <div class="col">
+        <div class="smal-img-row">
+          <div class="small-img">
+            <img src="img/pic1.png" height="100px">
+            <i class="fa-solid fa-circle-play play-btn" onclick="playVideo('media/video1.mp4')"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet <br> consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="smal-img-row">
+          <div class="small-img">
+            <img src="img/pic2.png" height="100px">
+            <i class="fa-solid fa-circle-play play-btn" onclick="playVideo('media/video2.mp4')"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet <br> consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="smal-img-row">
+          <div class="small-img">
+            <img src="img/pic3.png" height="100px">
+            <i class="fa-solid fa-circle-play play-btn" onclick="playVideo('media/video3.mp4')"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet <br> consectetur adipisicing elit.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-player" id="video-player">
+    <video src="media/Hasbi Rabbi.mp4" width="100%" controls autoplay type="video/mp4" id="myVideo">
+    </video>
+    <i class="fa-solid fa-circle-xmark close-btn" onclick="stopVideo()"></i>
+  </div>
+
+
+
+  <script>
+    var videoPlayer = document.getElementById("video-player")
+    var myVideo = document.getElementById("myVideo")
+
+    function stopVideo(){
+      videoPlayer.style.display ="none";
+    }
+
+    function playVideo(file){
+      myVideo.src = file;
+      videoPlayer.style.display = "block";
+    }
+  </script>
+
+  
+</body>
+</html>
